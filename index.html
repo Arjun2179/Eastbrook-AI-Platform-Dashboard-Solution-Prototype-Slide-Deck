@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Eastbrook Youth AI Well-Being — Dashboard and Solution Prototype slide deck for Assignment 3.2."
+    />
+    <title>Eastbrook Youth AI Well-Being — Slide Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="deck-shell">
+      <header class="deck-topbar">
+        <div class="brand-block">
+          <div class="eyebrow">Assignment 3.2 · Dashboard & Solution Prototype</div>
+          <div class="topbar-title">Eastbrook Youth AI Well-Being</div>
+        </div>
+
+        <div class="topbar-actions">
+          <a class="mini-link" href="#slide-1">Overview</a>
+          <a class="mini-link" href="#slide-2">AS-IS</a>
+          <a class="mini-link" href="#slide-4">Prototype</a>
+          <a class="mini-link" href="#slide-5">Comparison</a>
+          <a class="mini-link external" data-link="dashboard" href="#">Open Dashboard</a>
+          <a class="mini-link external" data-link="prototype" href="#">Open Prototype</a>
+          <a class="mini-link external" data-link="comparison" href="#">Open Comparison</a>
+        </div>
+      </header>
+
+      <main class="deck-viewport">
+        <section class="slides-track" id="slidesTrack">
+          <article class="slide slide-cover" id="slide-1" data-slide="1">
+            <div class="slide-grid hero-layout">
+              <div class="hero-copy">
+                <div class="eyebrow accent">MRP Final Submission · Eastbrook Case</div>
+                <h1>Eastbrook Youth AI Well-Being</h1>
+                <p class="lead">
+                  A school-facing dashboard and prototype workflow that turns student AI use into something
+                  measurable, reviewable, and easier to intervene on.
+                </p>
+
+                <div class="signal-row">
+                  <div class="signal-card">
+                    <div class="signal-label">AI workload</div>
+                    <div class="signal-value">14,119/day</div>
+                    <div class="signal-meta">35.3 prompts per student</div>
+                  </div>
+                  <div class="signal-card">
+                    <div class="signal-label">Verification baseline</div>
+                    <div class="signal-value">56.0%</div>
+                    <div class="signal-meta">44.0% automation bias</div>
+                  </div>
+                  <div class="signal-card">
+                    <div class="signal-label">Physical strain</div>
+                    <div class="signal-value">8.6 hrs/day</div>
+                    <div class="signal-meta">7.1 eye dryness · 5.9 neck pain</div>
+                  </div>
+                </div>
+
+                <div class="stat-row">
+                  <div class="stat-card">
+                    <div class="stat-value">400</div>
+                    <div class="stat-label">students</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">12K</div>
+                    <div class="stat-label">student-day observations</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">34</div>
+                    <div class="stat-label">dataset fields</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">prototype roles</div>
+                  </div>
+                </div>
+
+                <div class="action-stack">
+                  <a class="primary-link" data-link="dashboard" href="#">Original Problem Dashboard</a>
+                  <a class="secondary-link" data-link="prototype" href="#">Solution Prototype App</a>
+                  <a class="secondary-link" data-link="comparison" href="#">Comparison Dashboard</a>
+                </div>
+              </div>
+
+              <div class="panel problem-panel">
+                <div class="panel-heading">Why Eastbrook needs intervention</div>
+                <div class="problem-list problem-grid">
+                  <div class="problem-item">
+                    <div class="problem-number">14,119</div>
+                    <div class="problem-caption">prompts each day</div>
+                    <p>AI use is already routine in normal academic work.</p>
+                  </div>
+                  <div class="problem-item">
+                    <div class="problem-number">56%</div>
+                    <div class="problem-caption">baseline verification</div>
+                    <p>Too many students accept output before checking it.</p>
+                  </div>
+                  <div class="problem-item">
+                    <div class="problem-number">8.6 hrs</div>
+                    <div class="problem-caption">screen time each day</div>
+                    <p>Physical strain is visible at the same time as AI overuse.</p>
+                  </div>
+                  <div class="problem-item">
+                    <div class="problem-number">23</div>
+                    <div class="problem-caption">high-risk students</div>
+                    <p>A smaller subgroup needs targeted support, not generic messaging.</p>
+                  </div>
+                </div>
+
+                <div class="callout premium-callout">
+                  <div class="callout-title">Project thesis</div>
+                  <p>
+                    The goal is not to remove AI. The goal is to add verification friction, break reminders,
+                    educator visibility, and measurable intervention points.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="slide" id="slide-2" data-slide="2">
+            <div class="slide-kicker">Slide 2 · Data 1 — Original Problem Dashboard</div>
+            <h2>What the AS-IS Dashboard Shows</h2>
+            <p class="slide-subtitle">
+              This view covers the baseline phase only: <strong>6,000 rows</strong> across
+              <strong>Days 1–15</strong>, before any intervention is applied.
+            </p>
+
+            <div class="summary-strip">
+              <div class="summary-chip">
+                <span class="summary-chip-value">AS-IS</span>
+                <span class="summary-chip-label">baseline phase</span>
+              </div>
+              <div class="summary-chip">
+                <span class="summary-chip-value">6,000</span>
+                <span class="summary-chip-label">rows in view</span>
+              </div>
+              <div class="summary-chip">
+                <span class="summary-chip-value">Days 1–15</span>
+                <span class="summary-chip-label">time slice</span>
+              </div>
+              <div class="summary-chip">
+                <span class="summary-chip-value">3 filters</span>
+                <span class="summary-chip-label">age, reliance, day range</span>
+              </div>
+            </div>
+
+            <div class="slide-grid dashboard-layout">
+              <div class="dashboard-frame">
+                <div class="frame-topbar">
+                  <span class="frame-badge">AS-IS dashboard preview</span>
+                  <a class="frame-link" data-link="dashboard" href="#">Open full dashboard</a>
+                </div>
+
+                <iframe
+                  class="dashboard-embed"
+                  title="Eastbrook original problem dashboard"
+                  src="/dashboard/index.html"
+                  loading="lazy"
+                ></iframe>
+              </div>
+
+              <div class="panel">
+                <div class="panel-heading">What is visualized</div>
+                <div class="feature-list">
+                  <div class="feature-card">
+                    <div class="feature-title">KPI row</div>
+                    <p>Prompts, screen time, verification rate, and eye dryness headline the baseline story.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-title">RQ1 · Usage intensity</div>
+                    <p>Prompt volume, reliance distribution, and age-group exposure patterns.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-title">RQ2 · Verification habits</div>
+                    <p>Verification by complexity and the link between checking and error.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-title">RQ3 · Physical strain</div>
+                    <p>Session length, break behavior, eye dryness, neck pain, and symptom load.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-title">RQ4 · Cognitive independence</div>
+                    <p>Latency with vs without AI, planning skill, and confidence without AI.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-title">RQ5 · Social-emotional risk</div>
+                    <p>Social messaging, serious-topic AI use, and PII sharing patterns.</p>
+                  </div>
+                </div>
+
+                <div class="filter-callout">
+                  <div class="filter-title">Why the filters matter</div>
+                  <p>They test whether the issue is concentrated in one group or visible across the whole school.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="slide" id="slide-3" data-slide="3">
+            <div class="slide-kicker">Slide 3 · Data 1 — Dashboard Insights</div>
+            <h2>What the Data Reveals</h2>
+            <p class="slide-subtitle">
+              The baseline risk story is not just high AI use. It is high use combined with weak verification,
+              visible physical strain, and a smaller subgroup with much sharper dependence signals.
+            </p>
+
+            <div class="insight-grid">
+              <div class="insight-card">
+                <div class="insight-header">1 · Verification drops as task complexity rises</div>
+                <div class="metric-strip">
+                  <span>Low <strong>66.0%</strong></span>
+                  <span>Medium <strong>53.6%</strong></span>
+                  <span>High <strong>40.4%</strong></span>
+                </div>
+                <ul class="insight-points">
+                  <li><strong>Shows:</strong> students verify less when outputs are harder to judge.</li>
+                  <li><strong>Why it matters:</strong> the weakest checking behavior appears in the highest-risk work.</li>
+                </ul>
+              </div>
+
+              <div class="insight-card">
+                <div class="insight-header">2 · Over-reliant students are the clearest intervention target</div>
+                <div class="metric-grid tight">
+                  <div>
+                    <span class="metric-big">23</span>
+                    <span class="metric-small">dominant over-reliant students</span>
+                  </div>
+                  <div>
+                    <span class="metric-big">36.0%</span>
+                    <span class="metric-small">verification rate</span>
+                  </div>
+                  <div>
+                    <span class="metric-big">68.4%</span>
+                    <span class="metric-small">accept without checking</span>
+                  </div>
+                  <div>
+                    <span class="metric-big">241 → 306s</span>
+                    <span class="metric-small">latency with vs without AI</span>
+                  </div>
+                </div>
+                <ul class="insight-points">
+                  <li><strong>Shows:</strong> this subgroup verifies least and slows down sharply without AI.</li>
+                  <li><strong>Why it matters:</strong> Eastbrook can prioritize targeted intervention instead of broad reminders.</li>
+                </ul>
+              </div>
+
+              <div class="insight-card">
+                <div class="insight-header">3 · Physical strain is already severe at baseline</div>
+                <div class="metric-strip">
+                  <span>Screen time <strong>8.6 hrs/day</strong></span>
+                  <span>Eye dryness <strong>7.1/10</strong></span>
+                  <span>Neck pain <strong>5.9/10</strong></span>
+                </div>
+                <ul class="insight-points">
+                  <li><strong>Shows:</strong> device-linked strain is a main pattern, not a side finding.</li>
+                  <li><strong>Why it matters:</strong> the solution needs health guardrails as well as academic prompts.</li>
+                </ul>
+              </div>
+
+              <div class="insight-card">
+                <div class="insight-header">4 · Social-emotional AI use adds safeguarding risk</div>
+                <div class="metric-strip">
+                  <span>Social messaging <strong>41.6%</strong></span>
+                  <span>Serious topics <strong>33.2%</strong></span>
+                  <span>PII shared <strong>13.6%</strong></span>
+                </div>
+                <ul class="insight-points">
+                  <li><strong>Shows:</strong> some students use AI beyond assignment support.</li>
+                  <li><strong>Why it matters:</strong> educators need visibility into where academic and well-being risks overlap.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="callout subtle-callout">
+              <div class="callout-title">Age interpretation</div>
+              <p>Both age groups show heavy exposure. Older students are slightly higher, but the stronger story is school-wide overuse.</p>
+            </div>
+          </article>
+
+          <article class="slide" id="slide-4" data-slide="4">
+            <div class="slide-kicker">Slide 4 · Proposed Solution Application</div>
+            <h2>How the Prototype Supports Decision-Making</h2>
+            <p class="slide-subtitle">
+              The prototype turns the findings into a monitored workflow: student self-tracking, educator action,
+              and analyst evaluation in one role-based system.
+            </p>
+
+            <div class="summary-strip">
+              <div class="summary-chip">
+                <span class="summary-chip-value">3 roles</span>
+                <span class="summary-chip-label">student · educator · analyst</span>
+              </div>
+              <div class="summary-chip">
+                <span class="summary-chip-value">400</span>
+                <span class="summary-chip-label">linked student baselines</span>
+              </div>
+              <div class="summary-chip">
+                <span class="summary-chip-value">12K</span>
+                <span class="summary-chip-label">dataset rows behind analytics</span>
+              </div>
+              <div class="summary-chip">
+                <span class="summary-chip-value">/compare</span>
+                <span class="summary-chip-label">public impact view</span>
+              </div>
+            </div>
+
+            <div class="slide-grid solution-layout">
+              <div class="panel">
+                <div class="panel-heading">Role-based prototype</div>
+
+                <div class="role-stack">
+                  <div class="role-card role-student">
+                    <div class="role-name">Student portal</div>
+                    <p>Log sessions, compare live behavior against baseline, complete training, and respond to nudges.</p>
+                  </div>
+                  <div class="role-card role-educator">
+                    <div class="role-name">Educator console</div>
+                    <p>Review roster risk, open alerts, send nudges, and monitor trend summaries before risk becomes normal.</p>
+                  </div>
+                  <div class="role-card role-analyst">
+                    <div class="role-name">Analyst dashboard</div>
+                    <p>Filter by phase, age group, reliance type, and day range to test whether the intervention changes KPIs.</p>
+                  </div>
+                </div>
+
+                <div class="tech-strip">
+                  <span class="tech-chip">React frontend</span>
+                  <span class="tech-chip">Express backend</span>
+                  <span class="tech-chip">PostgreSQL dataset import</span>
+                </div>
+              </div>
+
+              <div class="panel solution-panel">
+                <div class="panel-heading">Prototype access and decision flow</div>
+
+                <div class="steps-list">
+                  <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-copy">Open the landing page.</div>
+                  </div>
+                  <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-copy">Choose a role card.</div>
+                  </div>
+                  <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-copy">Use the sidebar to move between role views.</div>
+                  </div>
+                  <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-copy">Open <code>/compare</code> for the public impact dashboard.</div>
+                  </div>
+                </div>
+
+                <div class="callout success">
+                  <div class="callout-title">Assignment fit</div>
+                  <p>No login page is required. The prototype already matches the role-selection access pattern requested in the assignment note.</p>
+                </div>
+
+                <div class="decision-grid">
+                  <div class="decision-card">
+                    <div class="decision-title">Student decision support</div>
+                    <p>Students can see drift early and act before weak habits become routine.</p>
+                  </div>
+                  <div class="decision-card">
+                    <div class="decision-title">Educator decision support</div>
+                    <p>Staff can intervene on higher-risk students instead of waiting for late aggregate reports.</p>
+                  </div>
+                  <div class="decision-card">
+                    <div class="decision-title">Analyst decision support</div>
+                    <p>Analysts can compare AS-IS and TO-BE evidence using the same filter logic.</p>
+                  </div>
+                </div>
+
+                <div class="action-stack compact">
+                  <a class="primary-link" data-link="prototype" href="#">Open Prototype App</a>
+                  <a class="secondary-link" data-link="comparison" href="#">Open Comparison View</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="slide" id="slide-5" data-slide="5">
+            <div class="slide-kicker">Slide 5 · Comparison Dashboard — Before vs After</div>
+            <h2>How the KPI Story Changes in TO-BE</h2>
+            <p class="slide-subtitle">
+              The comparison dashboard models the intervention phase. It should be described as a simulated
+              improvement view, not as a completed live-school rollout.
+            </p>
+
+            <div class="comparison-grid">
+              <div class="delta-card">
+                <div class="delta-label">Verification rate</div>
+                <div class="delta-line"><span class="before">56.0%</span><span class="arrow">→</span><span class="after">66.7%</span></div>
+                <div class="delta-tag positive">+10.7 pts</div>
+              </div>
+              <div class="delta-card">
+                <div class="delta-label">Automation bias</div>
+                <div class="delta-line"><span class="before">44.0%</span><span class="arrow">→</span><span class="after">33.3%</span></div>
+                <div class="delta-tag positive">-10.7 pts</div>
+              </div>
+              <div class="delta-card">
+                <div class="delta-label">Screen time</div>
+                <div class="delta-line"><span class="before">8.6 hrs</span><span class="arrow">→</span><span class="after">7.8 hrs</span></div>
+                <div class="delta-tag positive">-0.8 hrs</div>
+              </div>
+              <div class="delta-card">
+                <div class="delta-label">Eye dryness</div>
+                <div class="delta-line"><span class="before">7.1</span><span class="arrow">→</span><span class="after">6.3</span></div>
+                <div class="delta-tag positive">-0.8</div>
+              </div>
+              <div class="delta-card">
+                <div class="delta-label">Neck pain</div>
+                <div class="delta-line"><span class="before">5.9</span><span class="arrow">→</span><span class="after">5.3</span></div>
+                <div class="delta-tag positive">-0.6</div>
+              </div>
+              <div class="delta-card">
+                <div class="delta-label">Nudge success rate</div>
+                <div class="delta-line single"><span class="after">25.6%</span></div>
+                <div class="delta-tag neutral">TO-BE outcome metric</div>
+              </div>
+            </div>
+
+            <div class="slide-grid two-col">
+              <div class="panel">
+                <div class="panel-heading">Comparison highlights</div>
+                <div class="mini-bars">
+                  <div class="mini-bar-row">
+                    <div class="mini-label">Daily prompts</div>
+                    <div class="mini-track">
+                      <div class="mini-bar before-bar" style="width: 100%"></div>
+                      <div class="mini-bar after-bar" style="width: 84.1%"></div>
+                    </div>
+                    <div class="mini-metric">14,119 → 11,871</div>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div class="mini-label">Prompts per student</div>
+                    <div class="mini-track">
+                      <div class="mini-bar before-bar" style="width: 100%"></div>
+                      <div class="mini-bar after-bar" style="width: 84.1%"></div>
+                    </div>
+                    <div class="mini-metric">35.3 → 29.7</div>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div class="mini-label">Physical strain index</div>
+                    <div class="mini-track">
+                      <div class="mini-bar before-bar" style="width: 100%"></div>
+                      <div class="mini-bar after-bar" style="width: 97.3%"></div>
+                    </div>
+                    <div class="mini-metric">0.75 → 0.73</div>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div class="mini-label">Latency with AI</div>
+                    <div class="mini-track">
+                      <div class="mini-bar before-bar" style="width: 100%"></div>
+                      <div class="mini-bar after-bar" style="width: 84.4%"></div>
+                    </div>
+                    <div class="mini-metric">219.2s → 185.1s</div>
+                  </div>
+                  <div class="mini-bar-row">
+                    <div class="mini-label">Latency without AI</div>
+                    <div class="mini-track">
+                      <div class="mini-bar before-bar" style="width: 100%"></div>
+                      <div class="mini-bar after-bar" style="width: 92.0%"></div>
+                    </div>
+                    <div class="mini-metric">268.6s → 247.2s</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel-heading">What the comparison means</div>
+                <div class="summary-cards">
+                  <div class="summary-card">
+                    <div class="summary-title">What changes</div>
+                    <p>Verification improves, automation bias drops, and symptom scores ease in TO-BE.</p>
+                  </div>
+                  <div class="summary-card">
+                    <div class="summary-title">Why it changes</div>
+                    <p>The workflow adds friction where AS-IS had none: nudges, break reminders, and role-based monitoring.</p>
+                  </div>
+                  <div class="summary-card">
+                    <div class="summary-title">Why it matters</div>
+                    <p>Eastbrook can improve both checking behavior and student well-being without banning AI use.</p>
+                  </div>
+                </div>
+
+                <div class="callout caution">
+                  <div class="callout-title">Presentation wording</div>
+                  <p>Describe TO-BE as a simulated intervention-phase comparison, not as a completed real-world deployment result.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="deck-footer">
+        <button class="nav-arrow" id="prevBtn" aria-label="Previous slide">‹</button>
+        <div class="pager" id="pager"></div>
+        <div class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">5</span></div>
+        <button class="nav-arrow" id="nextBtn" aria-label="Next slide">›</button>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

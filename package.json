@@ -1,0 +1,9 @@
+{
+  "name": "eastbrook-slide-deck",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "bash ./serve-local.sh",
+    "server": "bash ./run-prototype.sh"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "project": {
+    "title": "Eastbrook Youth AI Well-Being",
+    "subtitle": "Dashboard & Solution Prototype",
+    "students": {
+      "value": 400,
+      "unit": "students",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv",
+      "notes": "Unique user_id count across the full dataset."
+    },
+    "observations": {
+      "value": 12000,
+      "unit": "student-day observations",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv",
+      "notes": "AS-IS 6000 rows plus TO-BE 6000 rows."
+    },
+    "datasetFields": {
+      "value": 34,
+      "unit": "fields",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv",
+      "notes": "CSV column count."
+    },
+    "prototypeRoles": {
+      "value": 3,
+      "unit": "roles",
+      "source_path": "app/src/pages/Landing.tsx",
+      "notes": "Student, Educator, Analyst."
+    }
+  },
+  "originalProblem": {
+    "phase": {
+      "value": "AS-IS",
+      "source_path": "dashboard/src/App.tsx"
+    },
+    "dayRange": {
+      "value": "Days 1-15",
+      "source_path": "dashboard/src/App.tsx"
+    },
+    "rows": {
+      "value": 6000,
+      "unit": "rows",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "totalDailyPrompts": {
+      "value": 14119,
+      "unit": "prompts/day",
+      "source_path": "dashboard/public/data/hero_stats.json"
+    },
+    "avgPromptsPerStudent": {
+      "value": 35.3,
+      "unit": "prompts/student/day",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "verificationRate": {
+      "value": 56.0,
+      "unit": "%",
+      "source_path": "dashboard/public/data/hero_stats.json"
+    },
+    "automationBiasRate": {
+      "value": 44.0,
+      "unit": "%",
+      "source_path": "app/server/analytics.js",
+      "formula": "(1 - verification_rate) * 100"
+    },
+    "avgScreenTime": {
+      "value": 8.6,
+      "unit": "hrs/day",
+      "source_path": "dashboard/public/data/hero_stats.json"
+    },
+    "avgEyeDryness": {
+      "value": 7.1,
+      "unit": "/10",
+      "source_path": "dashboard/public/data/hero_stats.json"
+    },
+    "avgNeckPain": {
+      "value": 5.9,
+      "unit": "/10",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "dominantOverreliantStudents": {
+      "value": 23,
+      "unit": "students",
+      "source_path": "dashboard/public/data/reliance_dist.json",
+      "notes": "Dominant student-level reliance category count."
+    }
+  },
+  "verificationComplexity": {
+    "low": {
+      "value": 66.0,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "medium": {
+      "value": 53.6,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "high": {
+      "value": 40.4,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    }
+  },
+  "overrelianceBaseline": {
+    "rows": {
+      "value": 743,
+      "unit": "AS-IS rows",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv",
+      "notes": "Do not confuse this with the 23 dominant over-reliant students."
+    },
+    "verificationRate": {
+      "value": 36.0,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "acceptWithoutVerification": {
+      "value": 68.4,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "confidenceWithoutAI": {
+      "value": 2.69,
+      "unit": "score",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "latencyWithAI": {
+      "value": 241,
+      "unit": "sec",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "latencyWithoutAI": {
+      "value": 306,
+      "unit": "sec",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "socialMessaging": {
+      "value": 41.6,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "seriousTopics": {
+      "value": 33.2,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "piiShared": {
+      "value": 13.6,
+      "unit": "%",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    }
+  },
+  "ageContext": {
+    "ages13to14": {
+      "avgScreenTime": 8.5,
+      "avgContinuousUseHrs": 2.6,
+      "avgPromptsPerDay": 35,
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "ages15to17": {
+      "avgScreenTime": 8.6,
+      "avgContinuousUseHrs": 2.6,
+      "avgPromptsPerDay": 35,
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    }
+  },
+  "comparison": {
+    "verificationRate": {
+      "asIs": 56.0,
+      "toBe": 66.7,
+      "delta": 10.7,
+      "unit": "%",
+      "source_path": "app/server/analytics.js"
+    },
+    "automationBiasRate": {
+      "asIs": 44.0,
+      "toBe": 33.3,
+      "delta": -10.7,
+      "unit": "%",
+      "source_path": "app/server/analytics.js"
+    },
+    "screenTime": {
+      "asIs": 8.6,
+      "toBe": 7.8,
+      "delta": -0.8,
+      "unit": "hrs",
+      "source_path": "app/server/analytics.js"
+    },
+    "eyeDryness": {
+      "asIs": 7.1,
+      "toBe": 6.3,
+      "delta": -0.8,
+      "unit": "/10",
+      "source_path": "app/server/analytics.js"
+    },
+    "neckPain": {
+      "asIs": 5.9,
+      "toBe": 5.3,
+      "delta": -0.6,
+      "unit": "/10",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "totalDailyPrompts": {
+      "asIs": 14119,
+      "toBe": 11871,
+      "delta": -2248,
+      "unit": "prompts/day",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "avgPromptsPerStudent": {
+      "asIs": 35.3,
+      "toBe": 29.7,
+      "delta": -5.6,
+      "unit": "prompts/student/day",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "digitalPhysicalStrainIndex": {
+      "asIs": 0.75,
+      "toBe": 0.73,
+      "delta": -0.02,
+      "unit": "",
+      "source_path": "app/server/analytics.js",
+      "formula": "((eye dryness + neck pain) / 2) / screen time"
+    },
+    "nudgeSuccessRate": {
+      "value": 25.6,
+      "unit": "%",
+      "source_path": "app/server/analytics.js",
+      "formula": "((verification after nudges - baseline verification) / baseline verification) * 100"
+    },
+    "latencyWithAI": {
+      "asIs": 219.2,
+      "toBe": 185.1,
+      "delta": -34.1,
+      "unit": "sec",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    },
+    "latencyWithoutAI": {
+      "asIs": 268.6,
+      "toBe": 247.2,
+      "delta": -21.4,
+      "unit": "sec",
+      "source_path": "Arjun/synthetic_eastbrook_user_day.csv"
+    }
+  },
+  "prototypeNarrative": {
+    "officialAccessFlow": {
+      "value": [
+        "Open landing page",
+        "Choose a role card",
+        "Use the sidebar",
+        "Open /compare for the impact view"
+      ],
+      "source_path": "app/src/pages/Landing.tsx"
+    },
+    "noLoginClaim": {
+      "value": true,
+      "source_path": "app/src/pages/Landing.tsx",
+      "notes": "Use this in the deck because the assignment explicitly says the prototype should not be presented as a login flow."
+    },
+    "finalStack": {
+      "value": "React frontend + Express backend + PostgreSQL-backed dataset import",
+      "source_path": "app/README.md"
+    }
+  },
+  "doNotUse": {
+    "badStudentCount": 402,
+    "badToBeStudentCount": 202,
+    "badFieldCount": 26,
+    "badAccessStory": "credential-based prototype access",
+    "notes": "These appeared in older drafts and should not appear in the final slide deck."
+  }
+}
