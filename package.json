@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "build": "echo 'Static site — no build step required'",
     "serve": "bash ./serve-local.sh",
     "server": "bash ./run-prototype.sh"
   }

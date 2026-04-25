@@ -1,7 +1,7 @@
 const deckConfig = {
-  dashboardUrl: "/dashboard/index.html",
-  prototypeUrl: "http://localhost:3001/",
-  comparisonUrl: "http://localhost:3001/compare",
+  dashboardUrl: "https://easterbook-youth-ai-dashboard.vercel.app/",
+  prototypeUrl: "https://eastbrook-ai-platform.vercel.app/",
+  comparisonUrl: "https://eastbrook-ai-platform.vercel.app/compare",
 };
 
 const slides = Array.from(document.querySelectorAll(".slide"));
